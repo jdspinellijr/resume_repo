@@ -1,0 +1,197 @@
+html {
+  box-sizing: border-box;
+  /* font-family: TimesNewRoman, 'Times New Roman', Times, Baskerville, 
+  Georgia, serif; */
+  font-weight: 400;
+  color: black;
+  text-shadow: none;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+}
+
+.bodyRez {
+  font-family: TimesNewRoman, 'Times New Roman', Times, Baskerville, 
+  Georgia, serif;
+  background: none;
+  background-size: 340px, auto;
+  min-height: calc(100vh - 10em);
+  /* set base font size. all other font settings are 
+  measured off of this */
+  font-size: 10px;
+  /* margin: 1st value=top & bottom, 2nd=left & right */
+  margin: 5em 9em;
+  background-attachment: fixed;
+  letter-spacing: 0.09em;
+}
+
+.wrapRez {
+  display: grid;
+  font-weight: 400;
+}
+
+.nameHdr {
+  display: flex;
+  justify-content: center;
+  text-transform: capitalize;
+  font-variant: small-caps;
+  font-size: 2.5em;
+}
+
+.contactLn {
+  display: flex;
+  font-weight: 400;
+  font-size: 1.75em;
+}
+.contact {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.cont1 > span { margin-right: auto; }
+.cont3 > span { margin-left: auto; }
+
+.phJobTitleEmployer {
+display: flex;
+justify-content: space-between;
+}
+
+.summry1 {
+margin-top: .25em;
+}
+
+.summry2 {
+margin-bottom: .25em;
+}
+
+.summry1, .summry2 {
+display: flex;
+justify-content: center;
+font-style: italic;
+}
+
+.summry1, 
+.summry2, 
+.summryWrap,
+.summQualBullet, 
+.techSkillsDtl, 
+.educDtl, 
+.phJobTitleEmployer,
+.summQual {
+font-size: 1.75em;
+}
+
+.summryWrap {
+  display: none;
+  margin: .25em auto;
+  font-style: italic;
+}
+
+.summQualBullet, .techSkillsDtl, .educDtl, .phTtlEmp, .phDtl {
+margin-top: 0;
+}
+
+.summQual {
+text-transform: uppercase;
+text-transform: all-caps;
+margin: 20px 0 0 0;
+}
+
+.techSkills, .educ, .profHistHdr {
+text-transform: uppercase;
+font-variant: small-caps;
+font-size: 1.75em;
+}
+
+.phTtlEmp {
+list-style-type: none;
+padding-left: 0em;
+}
+
+.techSkillsDtl, .educDtl, .phTtlEmp {
+list-style-type: none;
+padding-left: 0em;
+}
+
+.phDtl {
+padding-left: 1em;
+font-size: 1.8em;
+font-weight: normal;
+margin-bottom: 1em;
+}
+
+.jobTitle, 
+.employer, 
+.summry,
+.summryWrap {
+  font-weight: 900;
+}
+
+/* css (hRule1/hRule2) below came from your own codepen */
+.hRule1 {
+  width: 100%;
+  height: .07em;
+  background: #333;
+  background-color: #000;
+  border: .5px solid #000;
+}   
+
+.hRule2 {
+  width: 100%;
+  height: .3em;
+  border: 2px solid #000;
+  color: #9E9E9E;
+  background-color: #000;
+  text-align: left;  
+}
+
+@media (max-width: 1000px) {
+  .bodyRez {
+    /* at a smaller width, narrow margin to 
+    fit more content */
+    margin: 5em;
+  }
+}
+
+@media (max-width: 875px) {
+  .contactLn {
+    display: grid;
+  }
+
+  .contact {
+    display: grid;
+    justify-content: left;
+  }
+
+  .cont1 .cont2 .cont3 {
+    justify-content: left;
+  }
+
+  /* move bullet items to left as viewport shrinks */
+  .summQualBullet {
+    padding-left: 1em;
+  }
+
+  .summry {
+    display: none;
+  }
+
+  .summryWrap {
+    display: flex;
+    justify-content: left;
+  }
+}
+
+@media (max-width: 750px) {
+
+  .phJobTitleEmployer {
+    display: grid;
+    }
+
+}
